@@ -1,11 +1,15 @@
-const express = require('express')
-const app = express()
-const port = 3000
+require("dotenv").config();
+const http = require("http");
+const app = require("./src/app");
+const connectDB = require("./src/db/connectDB");
+const server = http.createServer(app);
+const port = process.env.PORT || 5000;
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+const main = async () => {
+  await connectDB();
+  server.listen(port, () => {
+    console.log(`Server Running on Port : ${port}`);
+  });
+};
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+main();
