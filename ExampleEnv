@@ -1,0 +1,25 @@
+# DATABASE
+
+DB_LOCAL = your server access token
+
+DB_PROD =
+
+DB_NAME=swiftInbox
+
+# CREDENTIALS
+
+DB_LOCAL_USER=your server access login info (userName)
+
+DB_LOCAL_PASS=your server access login info (pass)
+
+ACCESS_TOKEN_SECRET= token secret you want to provide
+
+# ENVIROMENT
+
+NODE_ENV = development
+
+# CLIENT SIDE URL
+
+CLIENT=your client side address after deploying
+
+LOCAL_CLIENT=client side local host
