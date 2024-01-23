@@ -8,12 +8,14 @@ const port = process.env.PORT || 5000;
 const authenticationRoutes = require("./routes/authentication");
 const messagesRoutes = require("./routes/messages");
 const mailRoutes = require("./routes/mail");
+const usersRoutes = require("./routes/users");
 
 applyMiddleware(app);
 
 app.use(authenticationRoutes);
 app.use(messagesRoutes);
 app.use(mailRoutes);
+app.use(usersRoutes);
 
 app.get("/", (req, res) => {
   res.send("SwiftInbox Server Is Running");
