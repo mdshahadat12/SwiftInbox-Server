@@ -2,7 +2,6 @@ const UserModel = require("../../models/UserModel");
 
 const manageUsers = async (req, res, next) => {
   const user = req.body;
-  console.log(user, "hit");
   const checkUser = await UserModel.findOne({ userEmail: user.userEmail });
 
   if (checkUser) {
