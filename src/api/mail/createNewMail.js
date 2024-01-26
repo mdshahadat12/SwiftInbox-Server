@@ -8,8 +8,8 @@ const createNewMail = async (req, res) => {
     }
   );
 
-  // res.send(await resp.json());
-  res.send(resp);
+  res.send(await resp.json());
+  // res.send(resp);
 
   // {"email": xxxx, "token": xxxx}
 };
