@@ -7,6 +7,6 @@ const emailSchema = new Schema({
   timeStamp: String,
 });
 
-const Email = model("Email", emailSchema);
+const EmailModel = model("Email", emailSchema);
 
-module.exports = Email;
+module.exports = EmailModel;

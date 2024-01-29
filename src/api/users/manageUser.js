@@ -12,6 +12,7 @@ const manageUser = async (req, res, next) => {
           message: "User Already Exists",
         });
       } else if (checkUser.tempMail != user.tempMail) {
+        console.log(user.tempMail);
         const updatedUser = await UserModel.findOneAndUpdate(
           { userEmail: user.userEmail },
           { tempMail: user.tempMail },
