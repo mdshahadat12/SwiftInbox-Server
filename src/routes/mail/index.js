@@ -8,6 +8,6 @@ var router = express.Router();
 router.get("/new", createNewMail);
 router.get("/get-mail", getNewMail);
 router.get("/get-domains", getDomains);
-router.delete("/delete-mail", deleteMail);
+router.delete("/delete-mail/:id", deleteMail);
 
 module.exports = router;
