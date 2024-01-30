@@ -3,7 +3,8 @@ const getDomains = async (req, res, next) => {
     const domains = await fetch(
       "https://api.internal.temp-mail.io/api/v4/domains"
     );
-    res.status(200).send(await domains.json());
+    const customDomains = await domains.json();
+    res.status(200).send(customDomains.domains);
   } catch (err) {
     next(err);
   }
