@@ -21,7 +21,6 @@ const createNewMail = async (req, res, next) => {
       }
     );
 
-    console.log("hit");
     res.status(201).send(await resp.json());
   } catch (err) {
     next(err);
