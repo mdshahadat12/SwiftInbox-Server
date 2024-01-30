@@ -3,7 +3,7 @@ const MessageModel = require("../../models/MessageModel");
 const deleteMail = async (req, res, next) => {
   try {
     const id = req.params.id;
-    const result = await MessageModel.deleteOne({
+    const result = await MessageModel.findOneAndDelete({
       _id: id,
     });
     res.status(201).send(result);
