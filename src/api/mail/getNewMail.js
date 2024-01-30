@@ -1,6 +1,8 @@
 const TempMail = require("node-temp-mail");
 const TempMailModel = require("../../models/TempMailModel");
 
+// this is done with node-temp-mail which is not being used right now
+
 const getNewMail = async (req, res, next) => {
   // generating random email name
   const generateRandomEmail = () => {
