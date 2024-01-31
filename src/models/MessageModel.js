@@ -19,7 +19,7 @@ const messageSchema = new Schema({
   },
   subject: {
     type: String,
-    required: true,
+    // required: true,
   },
   body_text: {
     type: String,
