@@ -3,7 +3,6 @@ const UserModel = require("../../models/UserModel");
 const manageUser = async (req, res, next) => {
   try {
     const user = req.body;
-    console.log(user);
 
     const checkUser = await UserModel.findOne({ userEmail: user.userEmail });
 
