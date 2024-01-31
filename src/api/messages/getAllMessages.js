@@ -3,7 +3,6 @@ const MessageModel = require("../../models/MessageModel");
 const getAllMessages = async (req, res, next) => {
   try {
     const email = req.query.email;
-
     const resp = await fetch(
       `https://api.internal.temp-mail.io/api/v3/email/${email}/messages`
     );
@@ -38,15 +37,13 @@ const getAllMessages = async (req, res, next) => {
       await messageArray?.map(async (message) => {
         checkMessage(message);
       });
-
-      const messages = await MessageModel.find({
-        to: email,
-      });
-      
-
-      res.send(messages);
     }
 
+    let messages = [];
+    messages = await MessageModel.find({
+      to: email,
+    });
+    res.send(messages);
     // const address = new TempMail(email.split("@")[0]);
 
     // address.fetchEmails((err, body) => {
