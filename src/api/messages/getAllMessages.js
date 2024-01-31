@@ -42,6 +42,8 @@ const getAllMessages = async (req, res, next) => {
       const messages = await MessageModel.find({
         to: email,
       });
+      
+
       res.send(messages);
     }
 

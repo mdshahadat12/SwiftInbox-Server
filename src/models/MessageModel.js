@@ -19,7 +19,6 @@ const messageSchema = new Schema({
   },
   subject: {
     type: String,
-    // required: true,
   },
   body_text: {
     type: String,
@@ -36,6 +35,10 @@ const messageSchema = new Schema({
   attachments: {
     type: Array,
     default: [],
+  },
+  status: {
+    type: String,
+    default: "unread",
   },
 });
 
