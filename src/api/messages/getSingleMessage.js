@@ -1,8 +1,12 @@
 const MessageModel = require("../../models/MessageModel");
-const getSingleMessage = async (req, res) => {
-  const id = req.params.id;
-      console.log(id);
-      const result = await MessageModel.findOne({_id:id});
-      res.send(result);
+
+const getSingleMessage = async (req, res, next) => {
+  try {
+    const id = req.params.id;
+    const result = await MessageModel.findOne({ _id: id });
+    res.send(result);
+  } catch (err) {
+    next(err);
+  }
 };
 module.exports = getSingleMessage;
