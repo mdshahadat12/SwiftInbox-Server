@@ -40,6 +40,10 @@ const messageSchema = new Schema({
     type: String,
     default: "unread",
   },
+  bookmark: {
+    type: Array,
+    default: [],
+  },
 });
 
 const MessageModel = model("message", messageSchema);

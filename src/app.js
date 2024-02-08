@@ -9,6 +9,7 @@ const authenticationRoutes = require("./routes/authentication");
 const messagesRoutes = require("./routes/messages");
 const mailRoutes = require("./routes/mail");
 const usersRoutes = require("./routes/users");
+const bookmarkRoutes = require("./routes/bookmark");
 
 applyMiddleware(app);
 
@@ -16,6 +17,7 @@ app.use(authenticationRoutes);
 app.use(messagesRoutes);
 app.use(mailRoutes);
 app.use(usersRoutes);
+app.use(bookmarkRoutes);
 
 app.get("/", (req, res) => {
   res.send("SwiftInbox Server Is Running");
