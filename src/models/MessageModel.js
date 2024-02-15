@@ -44,6 +44,10 @@ const messageSchema = new Schema({
     type: Array,
     default: [],
   },
+  label: {
+    type: String,
+    default: "",
+  },
 });
 
 const MessageModel = model("message", messageSchema);
