@@ -13,7 +13,7 @@ const reviewSchema = new Schema({
     type: String,
     required: true,
   },
-  review: {
+  opinion: {
     type: String,
     required: true,
   },
