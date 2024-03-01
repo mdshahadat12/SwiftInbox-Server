@@ -4,7 +4,6 @@ const updateRole = async (req, res, next) => {
   try {
     const email = req.body.email;
     const role = req.body.role;
-
     const result = await UserModel.findOneAndUpdate(
       { userEmail: email },
       { role: role }
