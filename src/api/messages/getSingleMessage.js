@@ -1,11 +1,12 @@
-const getSingleMessage = async (req, res) => {
-  const id = req.params.id;
+const MessageModel = require("../../models/MessageModel");
 
-  const resp = await fetch(
-    `https://api.internal.temp-mail.io/api/v3/message/${id}`
-  );
-  const out = await resp.json();
-  res.send(out.body_html || out.body_text);
+const getSingleMessage = async (req, res, next) => {
+  try {
+    const id = req.params.id;
+    const result = await MessageModel.findOne({ _id: id });
+    res.send(result);
+  } catch (err) {
+    next(err);
+  }
 };
-
 module.exports = getSingleMessage;

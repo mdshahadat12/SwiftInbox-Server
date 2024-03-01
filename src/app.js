@@ -8,12 +8,22 @@ const port = process.env.PORT || 5000;
 const authenticationRoutes = require("./routes/authentication");
 const messagesRoutes = require("./routes/messages");
 const mailRoutes = require("./routes/mail");
+const usersRoutes = require("./routes/users");
+const bookmarkRoutes = require("./routes/bookmark");
+const labelRoutes = require("./routes/label");
+const manageRoutes = require("./routes/manage");
+const reviewsRoutes = require("./routes/reviews");
 
 applyMiddleware(app);
 
 app.use(authenticationRoutes);
 app.use(messagesRoutes);
 app.use(mailRoutes);
+app.use(usersRoutes);
+app.use(bookmarkRoutes);
+app.use(labelRoutes);
+app.use(manageRoutes);
+app.use(reviewsRoutes);
 
 app.get("/", (req, res) => {
   res.send("SwiftInbox Server Is Running");
