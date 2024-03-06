@@ -7,8 +7,8 @@ const applyMiddleware = (app) => {
   app.use(express.json());
   app.use(
     cors({
-      origin: [process.env.LOCAL_CLIENT,process.env.CLIENT],
-      // origin: ['http://localhost:5173','https://swiftinbox.netlify.app'],
+      // origin: [process.env.LOCAL_CLIENT,process.env.CLIENT],
+      origin: ["http://localhost:5173", "https://swiftinbox.netlify.app"],
       credentials: true,
     })
   );
