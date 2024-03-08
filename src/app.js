@@ -11,7 +11,6 @@ const mailRoutes = require("./routes/mail");
 const usersRoutes = require("./routes/users");
 const bookmarkRoutes = require("./routes/bookmark");
 const labelRoutes = require("./routes/label");
-const manageRoutes = require("./routes/manage");
 const reviewsRoutes = require("./routes/reviews");
 const blogRoutes = require("./routes/blog");
 
@@ -23,7 +22,6 @@ app.use(mailRoutes);
 app.use(usersRoutes);
 app.use(bookmarkRoutes);
 app.use(labelRoutes);
-app.use(manageRoutes);
 app.use(reviewsRoutes);
 app.use(blogRoutes);
 

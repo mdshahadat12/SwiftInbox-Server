@@ -17,6 +17,22 @@ const userSchema = new Schema({
     required: true,
     default: "user",
   },
+  address: {
+    type: String,
+    default: "N/A",
+  },
+  country: {
+    type: String,
+    default: "N/A",
+  },
+  dateOfBirth: {
+    type: String,
+    default: "N/A",
+  },
+  phoneNumber: {
+    type: String,
+    default: "N/A",
+  },
 });
 
 const UserModel = model("User", userSchema);
