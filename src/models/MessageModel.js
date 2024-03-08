@@ -15,7 +15,7 @@ const messageSchema = new Schema({
   },
   cc: {
     type: String,
-    default: null,
+    default: "",
   },
   subject: {
     type: String,
