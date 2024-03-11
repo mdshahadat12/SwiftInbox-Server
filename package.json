@@ -19,6 +19,7 @@
     "faker": "^6.6.6",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.0.1",
-    "node-temp-mail": "^2.0.2"
+    "node-temp-mail": "^2.0.2",
+    "stripe": "^14.20.0"
   }
 }
